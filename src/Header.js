@@ -3,7 +3,8 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
-import AccountCircle from 'material-ui-icons/AccountCircle';
+import MdIconNotifications from 'material-ui/svg-icons/social/notifications';
+import MdIconMenu from 'material-ui/svg-icons/navigation/menu'
 
 
 class Header extends React.Component {
@@ -11,19 +12,31 @@ class Header extends React.Component {
 		return (
 			<AppBar
 				title="Betaclass"
-				iconElementRight={
+				iconElementLeft={
 					<IconMenu
 						iconButtonElement={
-							<IconButton><AccountCircle /></IconButton>
+							<IconButton><MdIconMenu color="white" /></IconButton>
 						}
 						targetOrigin={{horizontal: 'right', vertical: 'top'}}
 						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
 					>
-						<MenuItem primaryText="Profile" />
-						<MenuItem primaryText="Messages" />
-						<MenuItem primaryText="Sign out" />
+						<MenuItem primaryText="设置" />
+						<MenuItem primaryText="关于" />
+						<MenuItem primaryText="常见问题" />
 					</IconMenu>
 
+				}
+				iconElementRight={
+					<IconMenu
+						iconButtonElement={
+							<IconButton><MdIconNotifications color="white" /></IconButton>
+						}
+						targetOrigin={{horizontal: 'right', vertical: 'top'}}
+						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+					>
+						<MenuItem primaryText='私信' />
+						<MenuItem primaryText="通知" />
+					</IconMenu>
 				}
 			/>
 		);
