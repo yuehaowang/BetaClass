@@ -5,14 +5,15 @@ import Header from './Header'
 
 
 class App extends React.Component {
-  render() {
-	return (
-		<MuiThemeProvider>
-			<Header />
-		</MuiThemeProvider>
-	);
-  }
+	render() {
+		return (
+			<MuiThemeProvider>
+				<div>
+					<Header />
+				</div>
+			</MuiThemeProvider>
+		);
+	}
 }
-
 
 export default App;

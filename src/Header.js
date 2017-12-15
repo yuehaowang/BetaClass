@@ -1,7 +1,9 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton'
+import IconMenu from 'material-ui/IconMenu'
+import MenuItem from 'material-ui/MenuItem'
 import AccountCircle from 'material-ui-icons/AccountCircle';
-import FontIcon from 'material-ui/FontIcon';
 
 
 class Header extends React.Component {
@@ -9,7 +11,20 @@ class Header extends React.Component {
 		return (
 			<AppBar
 				title="Betaclass"
-				iconClassNameRight="muidocs-icon-action-home"
+				iconElementRight={
+					<IconMenu
+						iconButtonElement={
+							<IconButton><AccountCircle /></IconButton>
+						}
+						targetOrigin={{horizontal: 'right', vertical: 'top'}}
+						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+					>
+						<MenuItem primaryText="Profile" />
+						<MenuItem primaryText="Messages" />
+						<MenuItem primaryText="Sign out" />
+					</IconMenu>
+
+				}
 			/>
 		);
 	}
