@@ -17,10 +17,11 @@ class App extends React.Component {
 			<MuiThemeProvider>
 				<div>
 					<Header />
-					<Content selectedIndex={this.state.selectedIndex}/>
+					<div style={{maxHeight: window.innerHeight - 120, overflow: 'auto'}}>
+						<Content selectedIndex={this.state.selectedIndex}/>
+					</div>
 					<Bottom select={this.select.bind(this)} selectedIndex={this.state.selectedIndex}/>
 				</div>
-
 			</MuiThemeProvider>
 		);
 	}
