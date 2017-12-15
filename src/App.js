@@ -10,14 +10,14 @@ class App extends React.Component {
 		selectedIndex: 0,
 	};
 
-	select = (index) => this.setState({selectedIndex: index});
+	select = (index) => this.setState({selectedIndex: index});	
 
 	render() {
 		return (
 			<MuiThemeProvider>
 				<div>
 					<Header />
-					<Content />
+					<Content selectedIndex={this.state.selectedIndex}/>
 					<Bottom select={this.select.bind(this)} selectedIndex={this.state.selectedIndex}/>
 				</div>
 
