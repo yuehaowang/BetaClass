@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import {List, ListItem} from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
+import Divider from 'material-ui/Divider'
 import MdIconStarBorder from 'material-ui/svg-icons/toggle/star-border';
 import MdIconStar from 'material-ui/svg-icons/toggle/star';
 import MdIconSupervisorAccount from 'material-ui/svg-icons/action/supervisor-account';
@@ -20,7 +21,7 @@ class Content extends Component {
         var ctt;
 
         if (this.props.contentIndex >= 0){
-            if (this.props.contentIndex == 0) {
+            if (this.props.contentIndex === 0) {
                 ctt = (
                     <Card>
                         <CardHeader
@@ -37,14 +38,22 @@ class Content extends Component {
                         </CardActions>
                     </Card>
                 )
-            } else if (this.props.contentIndex == 100) {
+            } else if (this.props.contentIndex === 100) {
                 ctt = (
                     <Card>
                         <CardHeader
-                            title={<h1>1v1单挑赛</h1>}
+                            title={<h1><MdIconPermIdentity /> 1v1单挑赛</h1>}
+                            subtitle="开始时间 Dec 8, 2017"
                         />
+                        <Divider />
                         <CardText>
                             <h4>上海历年高考真题</h4>
+                            <p>
+                                <ul>
+                                    <li>限时：10min</li>
+                                    <li>题数：1道</li>
+                                </ul>
+                            </p>
                         </CardText>
                         <CardActions>
                             <RaisedButton label="返回" onClick={() => this.props.select(-1)}/>
@@ -52,14 +61,14 @@ class Content extends Component {
                         </CardActions>
                     </Card>
                 ) 
-            } else if (this.props.contentIndex == 101) {
+            } else if (this.props.contentIndex === 101) {
                 ctt = <Contest1v1 />
             }
         }
         else{
-            if (this.props.bottomIndex == 2) {
+            if (this.props.bottomIndex === 2) {
                 ctt = <UserProfile />
-            } else {
+            } else if (this.props.bottomIndex === 0) {
                 ctt = (
                     <List>
                     <ListItem primaryText="打卡题" secondaryText="鸡兔同笼" leftIcon={<MdIconBook />} rightAvatar={<div><MdIconStar  color={yellow500}/><MdIconStarBorder /><MdIconStarBorder /></div>} />
@@ -67,6 +76,16 @@ class Content extends Component {
                    
                     <ListItem onClick={() => {this.props.select(100)}} primaryText="单挑赛" secondaryText="开始时间 Dec 8, 2017" leftIcon={<MdIconPermIdentity />} />
                     <ListItem primaryText="5v5 团体赛 (3:4)" secondaryText="开始时间 Jan 9, 2018" leftIcon={<MdIconSupervisorAccount />} />
+                    </List>
+                )
+            } else if (this.props.bottomIndex === 1) {
+                ctt = (
+                    <List>
+                    <ListItem primaryText="打卡题" secondaryText="Python后缀表达式" leftIcon={<MdIconBook />} />
+                    <ListItem primaryText="复习题" secondaryText="古文常识默写" leftIcon={<MdIconBookMark />} />
+                   
+                    <ListItem primaryText="单挑赛" secondaryText="开始时间 Dec 27, 2017" leftIcon={<MdIconPermIdentity />} />
+                    <ListItem primaryText="5v5 团体赛 (3:4)" secondaryText="开始时间 Nov 11, 2018" leftIcon={<MdIconSupervisorAccount />} />
                     </List>
                 )
             }

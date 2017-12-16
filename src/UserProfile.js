@@ -7,8 +7,10 @@ import Chip from 'material-ui/Chip'
 import MdIconCake from 'material-ui/svg-icons/social/cake'
 import MdIconSchool from 'material-ui/svg-icons/social/school'
 import MdIconStars from 'material-ui/svg-icons/action/stars'
-import MdIconOfflinePin from 'material-ui/svg-icons/action/offline-pin'
+import MdIconFlashOn from 'material-ui/svg-icons/image/flash-on'
 import MdIconAllOut from 'material-ui/svg-icons/action/all-out'
+import MdIconHistory from 'material-ui/svg-icons/action/history'
+import MdIconChangeHistory from 'material-ui/svg-icons/action/change-history'
 import yuehaoavatar from './assets/avatar.png'
 
 class UserProfile extends React.Component {
@@ -31,7 +33,7 @@ class UserProfile extends React.Component {
 						<Divider />
 						<ListItem
 							insetChildren={true}
-							primaryText="某某学校"
+							primaryText="上海中学"
 							leftIcon={<MdIconSchool />}
 						/>
 						<Divider />
@@ -48,14 +50,32 @@ class UserProfile extends React.Component {
 						<Divider />
 						<ListItem
 							insetChildren={true}
-							primaryText="全国排名 1000+"
-							leftIcon={<MdIconOfflinePin />}
+							primaryText="全国排名 1024"
+							leftIcon={<MdIconFlashOn />}
 						/>
 						<Divider />
 						<ListItem
 							insetChildren={true}
-							primaryText="命中率 0.1%"
+							primaryText="命中率 64%"
 							leftIcon={<MdIconAllOut />}
+						/>
+						<Divider />
+						<ListItem
+							insetChildren={true}
+							primaryText="历史记录"
+							leftIcon={<MdIconHistory />}
+							nestedItems={[
+								<ListItem
+									key={1}
+									primaryText="1v1单挑赛 获胜"
+									leftIcon={<MdIconChangeHistory />}
+								/>,
+								<ListItem
+									key={2}
+									primaryText="完成复习题"
+									leftIcon={<MdIconChangeHistory />}
+								/>
+							]}
 						/>
 						<Divider />
 					</List>
