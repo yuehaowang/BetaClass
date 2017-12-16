@@ -30,12 +30,12 @@ class ProblemListView extends React.Component {
 			} else if (item.type === 2) {
 				primaryText = '5v5 团队赛';
 				secondaryText = item.subtitle;
-				leftIcon = <MdIconPermIdentity />;
+				leftIcon = <MdIconSupervisorAccount />;
 				rightAvatar = <div></div>;
 			} else if (item.type === 3) {
 				primaryText = '1v1 单挑赛';
 				secondaryText = item.subtitle;
-				leftIcon = <MdIconSupervisorAccount />;
+				leftIcon = <MdIconPermIdentity />;
 				rightAvatar = <div></div>;
 			} else {
 				return;
