@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {List, ListItem} from 'material-ui/List';
 import FlatButton from 'material-ui/FlatButton';
+import MdIconStarBorder from 'material-ui/svg-icons/toggle/star-border';
+import MdIconStar from 'material-ui/svg-icons/toggle/star';
+import MdIconSupervisorAccount from 'material-ui/svg-icons/action/supervisor-account';
+import MdIconBook from 'material-ui/svg-icons/action/book';
+import MdIconBookMark from 'material-ui/svg-icons/action/bookmark';
+
+import {red500, yellow500, blue500} from 'material-ui/styles/colors';
+
 
 class Content extends Component {
     ctxl=["内内内内内内内内内","外外外外外外外外外","我我我我我我我我"];
@@ -26,18 +35,22 @@ class Content extends Component {
                         </Card>)
         }
         else{
-            for(var i=0;i<6;i++){
-                items.push({index: i, content: "题目"})
-            }
-            ctt=items.map(function (item) {
-                return (<Card key={item.index}>
-                            <CardHeader
-                                title={this.ctxl[this.props.bottomIndex]}
-                                subtitle={item.content+(item.index+1).toString()}
-                                onClick={() => this.props.select(item.index+1)}
-                            />
-                        </Card>)
-            }.bind(this))
+            var ctt=(
+                <List>
+                <ListItem primaryText="打卡题" secondaryText="鸡兔同笼" leftIcon={<MdIconBook />} rightAvatar={<div><MdIconStar  color={yellow500}/><MdIconStarBorder /><MdIconStarBorder /></div>} />
+                <ListItem primaryText="复习题" 
+                secondaryText="Dec 8, 2017 - Dec 15, 2017 课堂习题" 
+                leftIcon={<MdIconBookMark />} 
+                onNestedListToggle={this.handleNestedListToggle}
+                nestedItems={[
+                    <ListItem key={1} primaryText="Drafts" leftIcon={<MdIconBook />} />,
+                  ]}
+                />
+                <ListItem primaryText="复习题" secondaryText="Dec 8, 2017 - Dec 15, 2017 课堂习题" leftIcon={<MdIconBook />} rightAvatar={<div><MdIconStarBorder /><MdIconStarBorder /><MdIconStarBorder /></div>} />
+                <ListItem primaryText="复习题" secondaryText="Dec 8, 2017 - Dec 15, 2017 课堂习题" leftIcon={<MdIconBook />} rightAvatar={<div><MdIconStarBorder /><MdIconStarBorder /><MdIconStarBorder /></div>} />
+
+                <ListItem primaryText="5v5 团体赛 (3:4)" secondaryText="开始时间 Jan 9, 2018" leftIcon={<MdIconSupervisorAccount />} />
+                </List>)
         }
 
 		return (
