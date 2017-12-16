@@ -1,18 +1,27 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 import Header from './Header'
 import Bottom from './Bottom'
 import Content from './Content'
 
-class App extends React.Component {
-	state = {
-		bottomIndex: 0,
-		contentIndex:0,
-	};
 
-	selectBottom = (index) => this.setState({bottomIndex: index});	
-	selectContent = (index) => {this.setState({contentIndex: index});	console.log(this.state)}
+class App extends React.Component {
+	constructor() {
+		super();
+
+		this.state = {
+			bottomIndex: 0,
+			contentIndex:-1,
+		};
+	}
+
+	selectBottom = (index) => {
+		this.setState({bottomIndex: index, contentIndex: -1});
+	}
+
+	selectContent = (index) => {
+		this.setState({contentIndex: index});
+	}
 
 	render() {
 		return (
