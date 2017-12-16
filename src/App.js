@@ -7,10 +7,12 @@ import Content from './Content'
 
 class App extends React.Component {
 	state = {
-		selectedIndex: 0,
+		bottomIndex: 0,
+		contentIndex:0,
 	};
 
-	select = (index) => this.setState({selectedIndex: index});	
+	selectBottom = (index) => this.setState({bottomIndex: index});	
+	selectContent = (index) => {this.setState({contentIndex: index});	console.log(this.state)}
 
 	render() {
 		return (
@@ -18,9 +20,9 @@ class App extends React.Component {
 				<div>
 					<Header />
 					<div style={{maxHeight: window.innerHeight - 120, overflow: 'auto'}}>
-						<Content selectedIndex={this.state.selectedIndex}/>
+						<Content bottomIndex={this.state.bottomIndex} contentIndex={this.state.contentIndex} select={this.selectContent.bind(this)}/>
 					</div>
-					<Bottom select={this.select.bind(this)} selectedIndex={this.state.selectedIndex}/>
+					<Bottom select={this.selectBottom.bind(this)} bottomIndex={this.state.bottomIndex}/>
 				</div>
 			</MuiThemeProvider>
 		);

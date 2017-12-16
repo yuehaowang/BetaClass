@@ -11,7 +11,7 @@ class Bottom extends Component {
 	render() {
 		return (
 			<Paper zDepth={1} className='Bottom'>
-				<BottomNavigation selectedIndex={this.props.selectedIndex}>
+				<BottomNavigation selectedIndex={this.props.bottomIndex}>
 					<BottomNavigationItem
 						label="课内"
 						icon={<MdIconClass />}
