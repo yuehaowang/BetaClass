@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardText} from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
-import Paper from'material-ui/Paper'
-import MdIconQuestionAnswer from 'material-ui/svg-icons/action/question-answer'
-import MdIconCameraEnhance from 'material-ui/svg-icons/action/camera-enhance'
-import MdIconFlag from 'material-ui/svg-icons/content/flag'
-import q1img from './assets/q1.png'
+import Paper from'material-ui/Paper';
+import MdIconQuestionAnswer from 'material-ui/svg-icons/action/question-answer';
+import MdIconCameraEnhance from 'material-ui/svg-icons/action/camera-enhance';
+import MdIconFlag from 'material-ui/svg-icons/content/flag';
+import q1img from './assets/q1.png';
 import RaisedButton from 'material-ui/RaisedButton';
 
 

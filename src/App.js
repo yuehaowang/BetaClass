@@ -1,8 +1,8 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Header from './Header'
-import Bottom from './Bottom'
-import Content from './Content'
+import Header from './Header';
+import Bottom from './Bottom';
+import Content from './Content';
 
 
 class App extends React.Component {
@@ -11,25 +11,28 @@ class App extends React.Component {
 
 		this.state = {
 			bottomIndex: 0,
-			contentId: Content.INCLASS,
-			contentParam: {}
+			contentId: Content.HOME,
+			contentParams: {}
 		};
 
 		this.history = [];
 	}
 
 	selectBottom(index) {
-		var contentId;
+		let contentId, contentParams = {};
 
 		if (index === 0) {
-			contentId = Content.INCLASS;
+			contentId = Content.PROBLEM_PANEL;
+			contentParams = {
+				selectedTag: 0
+			};
 		} else if (index === 1) {
-			contentId = Content.OUTCLASS;
+			contentId = Content.HOME;
 		} else if (index === 2) {
 			contentId = Content.USER_PROFILE;
 		}
 
-		this.setState({contentId: contentId, contentParam: {}});
+		this.setState({contentId: contentId, contentParams: contentParams});
 		this.history.push(this.state);
 	}
 
@@ -41,8 +44,8 @@ class App extends React.Component {
 		this.setState(this.history.pop());
 	}
 
-	selectQuestion(id, d) {
-		this.setState({contentId: Content.PREPARE, contentParam: {qid: id, data: d}});
+	selectQuestion(d) {
+		this.setState({contentId: Content.PREPARE, contentParams: {questionData: d}});
 		this.history.push(this.state);
 	}
 

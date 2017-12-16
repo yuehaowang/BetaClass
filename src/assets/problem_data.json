@@ -1,0 +1,55 @@
+{
+	"inclass" : [
+		{
+			"type": 0,
+			"subtitle": "鸡兔同笼",
+			"description": "xxxxx",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "截止日期 - 12月23日"
+		},
+		{
+			"type": 1,
+			"subtitle": "勾股定理",
+			"description": "上海历年中考真题。通过本题，你能够学到勾股定理的基本应用方法。",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "截止日期 - 12月23日"
+		},
+		{
+			"type": 3,
+			"subtitle": "数学学术单挑赛",
+			"description": "xxxxx",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "1v1"
+		},
+		{
+			"type": 2,
+			"subtitle": "化学学术团队赛",
+			"description": "xxxxx",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "5v5"
+		}
+	],
+
+	"outclass" : [
+		{
+			"type": 1,
+			"subtitle": "西方诗词鉴赏",
+			"description": "xxxxx",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "截止日期 - 12月23日"
+		},
+		{
+			"type": 2,
+			"subtitle": "国际形式知识竞技",
+			"description": "xxxxx",
+			"timeLimit": "10min",
+			"sum": 1,
+			"condition": "5v5"
+		}
+	]
+}

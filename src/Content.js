@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import UserProfile from './UserProfile'
-import Contest1v1 from './Contest1v1'
-import ProblemListView from './ProblemListView'
-import Prepare from './Prepare'
+import UserProfile from './UserProfile';
+import Contest1v1 from './Contest1v1';
+import Prepare from './Prepare';
+import ProblemPanel from './ProblemPanel';
+import Home from './Home'
 
 
 class Content extends Component {
-	static INCLASS = 'in-class';
-	static OUTCLASS = 'out-class';
+	static PROBLEM_PANEL = 'problem_panel';
+	static HOME = 'home';
 	static USER_PROFILE = 'user_profile';
 	static PREPARE = 'prepare';
 	static CONTEST1V1 = 'contest1v1';
@@ -15,29 +16,13 @@ class Content extends Component {
 	render() {
 		var ctt;
 
-		if (this.props.contentId === Content.INCLASS) {
+		if (this.props.contentId === Content.PROBLEM_PANEL) {
 			ctt = (
-					<ProblemListView
-						problemList={[
-							{
-								type: ProblemListView.PROBLEM_TYPE_SIGN,
-								title: '签到题'
-							}
-						]}
-						mainApp = {this.props.mainApp}
-					/>
+					<ProblemPanel mainApp={this.props.mainApp} />
 				);
-		} else if (this.props.contentId === Content.OUTCLASS) {
+		} else if (this.props.contentId === Content.HOME) {
 			ctt = (
-					<ProblemListView
-						problemList={[
-							{
-								type: ProblemListView.PROBLEM_TYPE_REVIEW,
-								title: '复习题'
-							}
-						]}
-						mainApp = {this.props.mainApp}
-					/>
+					<Home mainApp={this.props.mainApp} />
 				);
 		} else if (this.props.contentId === Content.USER_PROFILE) {
 			ctt = <UserProfile />;

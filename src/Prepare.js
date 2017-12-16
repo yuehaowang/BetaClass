@@ -1,31 +1,45 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
-import MdIconPermIdentity from 'material-ui/svg-icons/action/perm-identity'
-import Divider from 'material-ui/Divider'
+import MdIconLabel from 'material-ui/svg-icons/action/label';
+import Divider from 'material-ui/Divider';
+import './css/Prepare.css';
 
 
 class Prepare extends React.Component {
 	render() {
+		let data = this.props.mainApp.state.contentParams.questionData;
+		let problemTypeStr;
+
+		if (data.type === 0) {
+			problemTypeStr = '打卡题';
+		} else if (data.type === 1) {
+			problemTypeStr = '复习题';
+		} else if (data.type === 2) {
+			problemTypeStr = '团队赛';
+		} else if (data.type === 3) {
+			problemTypeStr = '单挑赛';
+		}
+
 		return (
 			<Card>
 				<CardHeader
-					title={<h1><MdIconPermIdentity /> 1v1单挑赛</h1>}
-					subtitle='开始时间 Dec 8, 2017'
+					title={<h1><MdIconLabel /> {data.subtitle}</h1>}
+					subtitle={problemTypeStr + " | " + data.condition}
 				/>
 				<Divider />
 				<CardText>
 					<div>
-						<h4>上海历年高考真题</h4>
+						<h4>{data.description}</h4>
 						<div>
 							<ul>
-								<li>限时：10min</li>
-								<li>题数：1道</li>
+								<li>限时：{data.timeLimit}</li>
+								<li>题数：{data.sum}道</li>
 							</ul>
 						</div>
 					</div>
 				</CardText>
-				<CardActions>
+				<CardActions className="Prepare-action">
 					<RaisedButton label='返回' onClick={() => this.props.mainApp.back()}/>
 					<RaisedButton label='开始挑战' onClick={() => this.props.mainApp.enterChallenge()} />
 				</CardActions>

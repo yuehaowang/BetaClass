@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 import MdIconClass from 'material-ui/svg-icons/action/class';
-import MdIconAccessibility from 'material-ui/svg-icons/action/accessibility';
+import MdIconHome from 'material-ui/svg-icons/action/home';
 import MdIconAccountCircle from 'material-ui/svg-icons/action/account-circle';
-import './css/Bottom.css'
+import './css/Bottom.css';
 
 
 class Bottom extends Component {
@@ -12,11 +12,15 @@ class Bottom extends Component {
 		super();
 
 		this.state = {
-			selectedIndex: 0
+			selectedIndex: 1
 		};
 	}
 
 	select(i) {
+		if (this.state.selectedIndex === i) {
+			return;
+		}
+
 		this.setState({selectedIndex: i});
 		this.props.mainApp.selectBottom(i);
 	}
@@ -26,17 +30,14 @@ class Bottom extends Component {
 			<Paper zDepth={1} className='Bottom'>
 				<BottomNavigation selectedIndex={this.state.selectedIndex}>
 					<BottomNavigationItem
-						label='课内'
 						icon={<MdIconClass />}
 						onClick={() => this.select(0)}
 					/>
 					<BottomNavigationItem
-						label='课外'
-						icon={<MdIconAccessibility />}
+						icon={<MdIconHome />}
 						onClick={() => this.select(1)}
 					/>
 					<BottomNavigationItem
-						label='我'
 						icon={<MdIconAccountCircle />}
 						onClick={() => this.select(2)}
 					/>
