@@ -47,13 +47,15 @@ class Content extends Component {
                         />
                         <Divider />
                         <CardText>
-                            <h4>上海历年高考真题</h4>
-                            <p>
-                                <ul>
-                                    <li>限时：10min</li>
-                                    <li>题数：1道</li>
-                                </ul>
-                            </p>
+                            <div>
+                                <h4>上海历年高考真题</h4>
+                                <p>
+                                    <ul>
+                                        <li>限时：10min</li>
+                                        <li>题数：1道</li>
+                                    </ul>
+                                </p>
+                            </div>
                         </CardText>
                         <CardActions>
                             <RaisedButton label="返回" onClick={() => this.props.select(-1)}/>

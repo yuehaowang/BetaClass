@@ -19,66 +19,68 @@ class UserProfile extends React.Component {
 			<Card>
 				<CardHeader
 					title='wyh'
-					subtitle='学渣一枚，大神多多关照'
+					subtitle='学渣一枚，大神们多多关照'
 					avatar={yuehaoavatar}
 				/>
 				<CardMedia>
-					<List>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText="12岁  初中一年级"
-							leftIcon={<MdIconCake />}
-						/>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText="上海中学"
-							leftIcon={<MdIconSchool />}
-						/>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText={
-								<div style={{display: 'flex', flexWrap: 'wrap'}}>
-									<Chip style={{marginRight: 7}}>数学</Chip>
-									<Chip style={{marginRight: 7}}>物理</Chip>
-								</div>
-							}
-							leftIcon={<MdIconStars />}
-						/>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText="全国排名 1024"
-							leftIcon={<MdIconFlashOn />}
-						/>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText="命中率 64%"
-							leftIcon={<MdIconAllOut />}
-						/>
-						<Divider />
-						<ListItem
-							insetChildren={true}
-							primaryText="历史记录"
-							leftIcon={<MdIconHistory />}
-							nestedItems={[
-								<ListItem
-									key={1}
-									primaryText="1v1单挑赛 获胜"
-									leftIcon={<MdIconChangeHistory />}
-								/>,
-								<ListItem
-									key={2}
-									primaryText="完成复习题"
-									leftIcon={<MdIconChangeHistory />}
-								/>
-							]}
-						/>
-						<Divider />
-					</List>
+					<div>
+						<List>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText="12岁  初中一年级"
+								leftIcon={<MdIconCake />}
+							/>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText="上海中学"
+								leftIcon={<MdIconSchool />}
+							/>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText={
+									<div style={{display: 'flex', flexWrap: 'wrap'}}>
+										<Chip style={{marginRight: 7}}>数学</Chip>
+										<Chip style={{marginRight: 7}}>物理</Chip>
+									</div>
+								}
+								leftIcon={<MdIconStars />}
+							/>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText="全国排名 1024"
+								leftIcon={<MdIconFlashOn />}
+							/>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText="命中率 64%"
+								leftIcon={<MdIconAllOut />}
+							/>
+							<Divider />
+							<ListItem
+								insetChildren={true}
+								primaryText="历史记录"
+								leftIcon={<MdIconHistory />}
+								nestedItems={[
+									<ListItem
+										key={1}
+										primaryText="1v1单挑赛 获胜"
+										leftIcon={<MdIconChangeHistory />}
+									/>,
+									<ListItem
+										key={2}
+										primaryText="完成复习题"
+										leftIcon={<MdIconChangeHistory />}
+									/>
+								]}
+							/>
+							<Divider />
+						</List>
+					</div>
 				</CardMedia>
 				<CardActions>
 					<FlatButton label="更改信息" />
