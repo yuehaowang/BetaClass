@@ -2,34 +2,34 @@
 	"inclass" : [
 		{
 			"type": 0,
-			"subtitle": "鸡兔同笼",
-			"description": "xxxxx",
-			"timeLimit": "10min",
+			"subtitle": "高中物理基础题",
+			"description": "节选自历年上海高考物理，基础题，正确率>70%",
+			"timeLimit": "0.5min",
 			"sum": 1,
-			"condition": "截止日期 - 12月23日"
+			"condition": "截止日期- 12/23 23:59:59"
 		},
 		{
 			"type": 1,
-			"subtitle": "勾股定理",
-			"description": "上海历年中考真题。通过本题，你能够学到勾股定理的基本应用方法。",
-			"timeLimit": "10min",
-			"sum": 1,
-			"condition": "截止日期 - 12月23日"
+			"subtitle": "数学：二项式定理",
+			"description": "通过练习，复习并熟练解答二项式定理的相关题目。",
+			"timeLimit": "3min",
+			"sum": 3,
+			"condition": "截止日期- 12/23 23:59:59"
 		},
 		{
 			"type": 3,
-			"subtitle": "数学学术单挑赛",
-			"description": "xxxxx",
-			"timeLimit": "10min",
-			"sum": 1,
+			"subtitle": "学术单人对抗赛",
+			"description": "请根据需要选择比赛类型(自定义对战不计入排名积分)",
+			"timeLimit": "25min",
+			"sum": 5,
 			"condition": "1v1"
 		},
 		{
 			"type": 2,
-			"subtitle": "化学学术团队赛",
-			"description": "xxxxx",
-			"timeLimit": "10min",
-			"sum": 1,
+			"subtitle": "学术团体对抗赛",
+			"description": "团队协作，共同攻克难题，战胜对手",
+			"timeLimit": "15min",
+			"sum": 2,
 			"condition": "5v5"
 		}
 	],
@@ -37,18 +37,18 @@
 	"outclass" : [
 		{
 			"type": 1,
-			"subtitle": "西方诗词鉴赏",
-			"description": "xxxxx",
-			"timeLimit": "10min",
+			"subtitle": "微观经济学原理问答",
+			"description": "请根据题目写出你的见解",
+			"timeLimit": "15min",
 			"sum": 1,
-			"condition": "截止日期 - 12月23日"
+			"condition": "截止日期- 12/25 15:59:59"
 		},
 		{
 			"type": 2,
-			"subtitle": "国际形式知识竞技",
-			"description": "xxxxx",
+			"subtitle": "一站到底！",
+			"description": "涉及各方面常识知识，团队中任何一人答出即可。时间耗尽，双方平局",
 			"timeLimit": "10min",
-			"sum": 1,
+			"sum": 100,
 			"condition": "5v5"
 		}
 	]

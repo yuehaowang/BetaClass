@@ -24,7 +24,7 @@ class Prepare extends React.Component {
 		return (
 			<Card>
 				<CardHeader
-					title={<h1><MdIconLabel /> {data.subtitle}</h1>}
+					title={<h2><MdIconLabel /> {data.subtitle}</h2>}
 					subtitle={problemTypeStr + " | " + data.condition}
 				/>
 				<Divider />
