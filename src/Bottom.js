@@ -8,24 +8,37 @@ import './css/Bottom.css'
 
 
 class Bottom extends Component {
+	constructor() {
+		super();
+
+		this.state = {
+			selectedIndex: 0
+		};
+	}
+
+	select(i) {
+		this.setState({selectedIndex: i});
+		this.props.mainApp.selectBottom(i);
+	}
+
 	render() {
 		return (
 			<Paper zDepth={1} className='Bottom'>
-				<BottomNavigation selectedIndex={this.props.bottomIndex}>
+				<BottomNavigation selectedIndex={this.state.selectedIndex}>
 					<BottomNavigationItem
-						label="课内"
+						label='课内'
 						icon={<MdIconClass />}
-						onClick={() => this.props.select(0)}
+						onClick={() => this.select(0)}
 					/>
 					<BottomNavigationItem
-						label="课外"
+						label='课外'
 						icon={<MdIconAccessibility />}
-						onClick={() => this.props.select(1)}
+						onClick={() => this.select(1)}
 					/>
 					<BottomNavigationItem
-						label="我"
+						label='我'
 						icon={<MdIconAccountCircle />}
-						onClick={() => this.props.select(2)}
+						onClick={() => this.select(2)}
 					/>
 				</BottomNavigation>
 			</Paper>

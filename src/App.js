@@ -11,16 +11,44 @@ class App extends React.Component {
 
 		this.state = {
 			bottomIndex: 0,
-			contentIndex:-1,
+			contentId: Content.INCLASS,
+			contentParam: {}
 		};
+
+		this.history = [];
 	}
 
-	selectBottom = (index) => {
-		this.setState({bottomIndex: index, contentIndex: -1});
+	selectBottom(index) {
+		var contentId;
+
+		if (index === 0) {
+			contentId = Content.INCLASS;
+		} else if (index === 1) {
+			contentId = Content.OUTCLASS;
+		} else if (index === 2) {
+			contentId = Content.USER_PROFILE;
+		}
+
+		this.setState({contentId: contentId, contentParam: {}});
+		this.history.push(this.state);
 	}
 
-	selectContent = (index) => {
-		this.setState({contentIndex: index});
+	back() {
+		if (this.state.length <= 0) {
+			return;
+		}
+
+		this.setState(this.history.pop());
+	}
+
+	selectQuestion(id, d) {
+		this.setState({contentId: Content.PREPARE, contentParam: {qid: id, data: d}});
+		this.history.push(this.state);
+	}
+
+	enterChallenge() {
+		this.setState({contentId: Content.CONTEST1V1});
+		this.history.push(this.state);
 	}
 
 	render() {
@@ -29,9 +57,13 @@ class App extends React.Component {
 				<div>
 					<Header />
 					<div style={{maxHeight: window.innerHeight - 120, overflow: 'auto'}}>
-						<Content bottomIndex={this.state.bottomIndex} contentIndex={this.state.contentIndex} select={this.selectContent.bind(this)}/>
+						<Content
+							contentId={this.state.contentId}
+							contentParams={this.state.contentParams}
+							mainApp={this}
+						/>
 					</div>
-					<Bottom select={this.selectBottom.bind(this)} bottomIndex={this.state.bottomIndex}/>
+					<Bottom mainApp={this} />
 				</div>
 			</MuiThemeProvider>
 		);

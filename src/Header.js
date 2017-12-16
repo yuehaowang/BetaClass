@@ -11,31 +11,31 @@ class Header extends React.Component {
 	render() {
 		return (
 			<AppBar
-				title="Betaclass"
+				title='Betaclass'
 				iconElementLeft={
 					<IconMenu
 						iconButtonElement={
-							<IconButton><MdIconMenu color="white" /></IconButton>
+							<IconButton><MdIconMenu color='white' /></IconButton>
 						}
 						targetOrigin={{horizontal: 'right', vertical: 'top'}}
 						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
 					>
-						<MenuItem primaryText="设置" />
-						<MenuItem primaryText="关于" />
-						<MenuItem primaryText="常见问题" />
+						<MenuItem primaryText='设置' />
+						<MenuItem primaryText='关于' />
+						<MenuItem primaryText='常见问题' />
 					</IconMenu>
 
 				}
 				iconElementRight={
 					<IconMenu
 						iconButtonElement={
-							<IconButton><MdIconNotifications color="white" /></IconButton>
+							<IconButton><MdIconNotifications color='white' /></IconButton>
 						}
 						targetOrigin={{horizontal: 'right', vertical: 'top'}}
 						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
 					>
 						<MenuItem primaryText='私信' />
-						<MenuItem primaryText="通知" />
+						<MenuItem primaryText='通知' />
 					</IconMenu>
 				}
 			/>

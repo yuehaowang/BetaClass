@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardHeader, CardMedia, CardText} from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
 import Paper from'material-ui/Paper'
 import MdIconQuestionAnswer from 'material-ui/svg-icons/action/question-answer'
@@ -17,13 +17,17 @@ class Contest1v1 extends React.Component {
 			time: 0
 		};
 
-		setInterval(() => {
+		this.timer = setInterval(() => {
 			this.setState({time: this.state.time + 30});
 		}, 30);
 	}
 
+	componentWillUnmount() {
+		clearInterval(this.timer);
+	}
+
 	render() {
-		let paperStyle = {width: "50%", display: "inline-block", padding: 10};
+		let paperStyle = {width: '50%', display: 'inline-block', padding: 10};
 		let date = new Date(this.state.time);
 		let milliSec = date.getMilliseconds(),
 			sec = date.getSeconds(),
@@ -37,7 +41,7 @@ class Contest1v1 extends React.Component {
 					avatar={<MdIconQuestionAnswer />}
 				/>
 				<CardMedia>
-					<img src={q1img}/>
+					<img src={q1img} alt='q1' />
 				</CardMedia>
 				<CardText>
 					<Paper style={paperStyle} zDepth={1}>
@@ -50,9 +54,9 @@ class Contest1v1 extends React.Component {
 					</Paper>
 				</CardText>
 				<CardActions>
-					<RaisedButton primary={true} label="提交" icon={<MdIconCameraEnhance />} />
-                    <RaisedButton secondary={true} label="认输" icon={<MdIconFlag />} />
-                    <Chip style={{display: 'inline-block', marginLeft: 30}}>{min + ":" + sec + ":" + milliSec}</Chip>
+					<RaisedButton primary={true} label='提交' icon={<MdIconCameraEnhance />} />
+                    <RaisedButton secondary={true} label='认输' icon={<MdIconFlag />} />
+                    <Chip style={{display: 'inline-block', marginLeft: 30}}>{min + ':' + sec + ':' + milliSec}</Chip>
 				</CardActions>
 			</Card>
 		);

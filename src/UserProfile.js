@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardHeader, CardMedia} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
@@ -12,6 +12,7 @@ import MdIconAllOut from 'material-ui/svg-icons/action/all-out'
 import MdIconHistory from 'material-ui/svg-icons/action/history'
 import MdIconChangeHistory from 'material-ui/svg-icons/action/change-history'
 import yuehaoavatar from './assets/avatar.png'
+
 
 class UserProfile extends React.Component {
 	render() {
@@ -27,18 +28,21 @@ class UserProfile extends React.Component {
 						<List>
 							<Divider />
 							<ListItem
+								key={0}
 								insetChildren={true}
-								primaryText="12岁  初中一年级"
+								primaryText='12岁  初中一年级'
 								leftIcon={<MdIconCake />}
 							/>
 							<Divider />
 							<ListItem
+								key={1}
 								insetChildren={true}
-								primaryText="上海中学"
+								primaryText='上海中学'
 								leftIcon={<MdIconSchool />}
 							/>
 							<Divider />
 							<ListItem
+								key={2}
 								insetChildren={true}
 								primaryText={
 									<div style={{display: 'flex', flexWrap: 'wrap'}}>
@@ -50,30 +54,33 @@ class UserProfile extends React.Component {
 							/>
 							<Divider />
 							<ListItem
+								key={3}
 								insetChildren={true}
-								primaryText="全国排名 1024"
+								primaryText='全国排名 1024'
 								leftIcon={<MdIconFlashOn />}
 							/>
 							<Divider />
 							<ListItem
+								key={4}
 								insetChildren={true}
-								primaryText="命中率 64%"
+								primaryText='命中率 64%'
 								leftIcon={<MdIconAllOut />}
 							/>
 							<Divider />
 							<ListItem
+								key={5}
 								insetChildren={true}
-								primaryText="历史记录"
+								primaryText='历史记录'
 								leftIcon={<MdIconHistory />}
 								nestedItems={[
 									<ListItem
-										key={1}
-										primaryText="1v1单挑赛 获胜"
+										key={0}
+										primaryText='1v1单挑赛 获胜'
 										leftIcon={<MdIconChangeHistory />}
 									/>,
 									<ListItem
-										key={2}
-										primaryText="完成复习题"
+										key={1}
+										primaryText='完成复习题'
 										leftIcon={<MdIconChangeHistory />}
 									/>
 								]}
@@ -83,7 +90,7 @@ class UserProfile extends React.Component {
 					</div>
 				</CardMedia>
 				<CardActions>
-					<FlatButton label="更改信息" />
+					<FlatButton label='更改信息' />
 				</CardActions>
 			</Card>
 		);
