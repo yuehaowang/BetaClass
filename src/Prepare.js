@@ -39,9 +39,9 @@ class Prepare extends React.Component {
 						</div>
 					</div>
 				</CardText>
-				<CardActions className="Prepare-action">
-					<RaisedButton label='返回' onClick={() => this.props.mainApp.back()}/>
-					<RaisedButton label='开始挑战' onClick={() => this.props.mainApp.enterChallenge()} />
+				<CardActions className='Prepare-action'>
+					<RaisedButton primary={true} label='返回' onClick={() => this.props.mainApp.back()}/>
+					<RaisedButton primary={true} label='开始挑战' onClick={() => this.props.mainApp.enterChallenge()} />
 				</CardActions>
 			</Card>
 		);

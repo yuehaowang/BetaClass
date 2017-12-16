@@ -1,8 +1,10 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Header from './Header';
 import Bottom from './Bottom';
 import Content from './Content';
+import myTheme from './myTheme';
 
 
 class App extends React.Component {
@@ -56,7 +58,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<MuiThemeProvider>
+			<MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
 				<div>
 					<Header />
 					<div style={{maxHeight: window.innerHeight - 120, overflow: 'auto'}}>
