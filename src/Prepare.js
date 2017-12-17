@@ -42,6 +42,7 @@ class Prepare extends React.Component {
 				<CardActions style={{textAlign: 'center', paddingTop: 20, paddingBottom: 20}}>
 					<RaisedButton primary={true} label='返回' onClick={() => this.props.mainApp.back()}/>
 					<RaisedButton primary={true} label='开始挑战' onClick={() => this.props.mainApp.enterChallenge()} />
+					<RaisedButton primary={true} label='预约房间' onClick={() => this.props.mainApp.enterDiscussionRoom()} />
 				</CardActions>
 				<Divider />
 			</Card>

@@ -9,6 +9,7 @@ import MdIconExplore from 'material-ui/svg-icons/action/explore';
 import MdIconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import Subheader from 'material-ui/Subheader'
 import {lightBlue500, indigo500, green500, orange500} from 'material-ui/styles/colors';
+import fig1 from './assets/fig1.png';
 
 
 class Home extends React.Component {
@@ -34,41 +35,25 @@ class Home extends React.Component {
 				</Paper>
 
 				<Paper zDepth={1} style={{borderRadius: 8, padding: 5, marginTop: 20, backgroundColor: '#03A9F4', color: 'white'}}>
-					<Subheader style={{color: 'white'}}>命中率</Subheader>
+					<Subheader style={{color: 'white'}}>正确率</Subheader>
 					<div style={{paddingTop: 0, paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}>
 						<span style={{fontSize: 40}}>64.09%</span>
 						<MdIconCenterFocusWeak color='white' style={{width: 50, height: 50, float: 'right'}} />
 					</div>
 				</Paper>
 
+				<Paper zDepth={1} style={{borderRadius: 8, padding: 5, marginTop: 20, backgroundColor: '#E91E63', color: 'white'}}>
+					<Subheader style={{color: 'white'}}>你的段位</Subheader>
+					<div style={{paddingTop: 0, paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}>
+						<MdIconEqualizer color='white' style={{width: 50, height: 50}} />
+						<span style={{fontSize: 40, float: 'right'}}>白银</span>
+					</div>
+				</Paper>
 
-				<div style={{marginTop: 80}}>
-					<GridList>
-						<GridTile
-							key={0}
-							style={gridTileStyle}
-						>
-							<MdIconThumbUp style={iconSizeStyle} color={indigo500} />
-						</GridTile>
-						<GridTile
-							key={1}
-							style={gridTileStyle}
-						>
-							<MdIconEqualizer style={iconSizeStyle} color={green500} />
-						</GridTile>
-						<GridTile
-							key={2}
-							style={gridTileStyle}
-						>
-							<MdIconExplore style={iconSizeStyle} color={orange500} />
-						</GridTile>
-						<GridTile
-							key={3}
-							style={gridTileStyle}
-						>
-							<MdIconBookmarkBorder style={iconSizeStyle} color={lightBlue500} />
-						</GridTile>
-					</GridList>
+
+				<div style={{marginTop: 60}}>
+					<h2>学习记录</h2>
+					<img src={fig1} />
 				</div>
 			</div>
 		);

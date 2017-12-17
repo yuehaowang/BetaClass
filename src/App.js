@@ -17,7 +17,7 @@ class App extends React.Component {
 			contentParams: {}
 		};
 
-		this.history = [];
+		this.history = [this.state];
 	}
 
 	selectBottom(index) {
@@ -32,6 +32,7 @@ class App extends React.Component {
 			contentId = Content.HOME;
 		} else if (index === 2) {
 			contentId = Content.USER_PROFILE;
+			// contentId = Content.SCHOOL_MANAGE_PANEL;
 		}
 
 		this.setState({contentId: contentId, contentParams: contentParams});
@@ -46,6 +47,11 @@ class App extends React.Component {
 		this.setState(this.history.pop());
 	}
 
+	selectNotificationList() {
+		this.setState({contentId: Content.NOTIFICATION_LIST})
+		this.history.push(this.state);
+	}
+
 	selectQuestion(d) {
 		this.setState({contentId: Content.PREPARE, contentParams: {questionData: d}});
 		this.history.push(this.state);
@@ -56,11 +62,19 @@ class App extends React.Component {
 		this.history.push(this.state);
 	}
 
+	enterNotification() {
+		this.setState({contentId: Content.NOTIFICATION_CONTENT});
+	}
+
+	enterDiscussionRoom() {
+		this.setState({contentId: Content.DISCUSSION_ROOM});
+	}
+
 	render() {
 		return (
 			<MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
 				<div>
-					<Header />
+					<Header mainApp={this} />
 					<div style={{maxHeight: window.innerHeight - 120, overflow: 'auto'}}>
 						<Content
 							contentId={this.state.contentId}

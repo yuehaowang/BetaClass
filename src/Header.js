@@ -35,7 +35,7 @@ class Header extends React.Component {
 						anchorOrigin={{horizontal: 'right', vertical: 'top'}}
 					>
 						<MenuItem primaryText='私信' />
-						<MenuItem primaryText='通知' />
+						<MenuItem onClick={() => this.props.mainApp.selectNotificationList()} primaryText='通知' />
 					</IconMenu>
 				}
 			/>

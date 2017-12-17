@@ -14,77 +14,78 @@ import MdIconChangeHistory from 'material-ui/svg-icons/action/change-history';
 import yuehaoavatar from './assets/avatar.png';
 import Avatar from 'material-ui/Avatar';
 import MdIconList from 'material-ui/svg-icons/action/list'
+import fig2 from './assets/fig2.png'
 
 
-class UserProfile extends React.Component {
+class SchoolManangePanel extends React.Component {
 	render() {
 		return (
 			<Card>
 				<CardHeader
-					title='王小明'
-					subtitle='学渣一枚，大神们多多关照'
-					avatar={yuehaoavatar}
+					title='上海中学'
+					subtitle='上海中学官方学生管理系统'
+					avatar={<Avatar>上</Avatar>}
 				/>
 				<CardMedia>
 					<div>
 						<List>
 							<Divider />
 							<ListItem
-								key={0}
-								insetChildren={true}
-								primaryText='16岁 高中二年级'
-								leftIcon={<MdIconCake />}
-							/>
-							<Divider />
-							<ListItem
 								key={1}
 								insetChildren={true}
-								primaryText='上海中学'
-								leftIcon={<MdIconSchool />}
+								primaryText='一班'
+								leftIcon={<MdIconList />}
+								nestedItems={[
+									<ListItem
+										key={0}
+										primaryText='物理'
+										leftIcon={<MdIconChangeHistory />}
+									/>,
+									<ListItem
+										key={0}
+										primaryText='教师 - 柳老师'
+										leftIcon={<MdIconChangeHistory />}
+									/>,
+									<ListItem
+										key={1}
+										primaryText={
+											<img src={fig2} width={300} />
+										}
+										leftIcon={<MdIconChangeHistory />}
+									/>
+								]}
 							/>
 							<Divider />
 							<ListItem
 								key={2}
 								insetChildren={true}
-								primaryText={
-									<div style={{display: 'flex', flexWrap: 'wrap'}}>
-										<Chip style={{marginRight: 7}}>数学</Chip>
-										<Chip style={{marginRight: 7}}>物理</Chip>
-									</div>
-								}
-								leftIcon={<MdIconStars />}
+								primaryText='二班'
+								leftIcon={<MdIconList />}
+								nestedItems={[
+									<ListItem
+										key={0}
+										primaryText='英语'
+										leftIcon={<MdIconChangeHistory />}
+									/>,
+									<ListItem
+										key={1}
+										primaryText='朱小坤'
+										leftIcon={<MdIconChangeHistory />}
+									/>
+								]}
 							/>
 							<Divider />
 							<ListItem
 								key={3}
 								insetChildren={true}
-								primaryText='全国综合排名 1024'
-								leftIcon={<MdIconFlashOn />}
-							/>
-							<Divider />
-							<ListItem
-								key={4}
-								insetChildren={true}
-								primaryText='正确率 64%'
-								leftIcon={<MdIconAllOut />}
-							/>
-							<Divider />
-							<ListItem
-								key={5}
-								insetChildren={true}
-								primaryText='挑战记录'
-								leftIcon={<MdIconHistory />}
+								primaryText='三班'
+								leftIcon={<MdIconList />}
 								nestedItems={[
 									<ListItem
 										key={0}
-										primaryText='1v1单挑赛 获胜'
+										primaryText='崔小舟'
 										leftIcon={<MdIconChangeHistory />}
 									/>,
-									<ListItem
-										key={1}
-										primaryText='完成复习题'
-										leftIcon={<MdIconChangeHistory />}
-									/>
 								]}
 							/>
 							<Divider />
@@ -99,4 +100,6 @@ class UserProfile extends React.Component {
 	}
 }
 
-export default UserProfile;
+export default SchoolManangePanel;
+
+
