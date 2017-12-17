@@ -3,7 +3,6 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import MdIconLabel from 'material-ui/svg-icons/action/label';
 import Divider from 'material-ui/Divider';
-import './css/Prepare.css';
 
 
 class Prepare extends React.Component {
@@ -28,7 +27,7 @@ class Prepare extends React.Component {
 					subtitle={problemTypeStr + " | " + data.condition}
 				/>
 				<Divider />
-				<CardText>
+				<CardText style={{paddingBottom: 80, paddingLeft: 25, paddingRight: 25}}>
 					<div>
 						<h4>{data.description}</h4>
 						<div>
@@ -39,10 +38,12 @@ class Prepare extends React.Component {
 						</div>
 					</div>
 				</CardText>
-				<CardActions className='Prepare-action'>
+				<Divider />
+				<CardActions style={{textAlign: 'center', paddingTop: 20, paddingBottom: 20}}>
 					<RaisedButton primary={true} label='返回' onClick={() => this.props.mainApp.back()}/>
 					<RaisedButton primary={true} label='开始挑战' onClick={() => this.props.mainApp.enterChallenge()} />
 				</CardActions>
+				<Divider />
 			</Card>
 		);
 	}

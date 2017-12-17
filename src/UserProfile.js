@@ -56,7 +56,7 @@ class UserProfile extends React.Component {
 							<ListItem
 								key={3}
 								insetChildren={true}
-								primaryText='全国排名 1024'
+								primaryText='全国综合排名 1024'
 								leftIcon={<MdIconFlashOn />}
 							/>
 							<Divider />
@@ -70,7 +70,7 @@ class UserProfile extends React.Component {
 							<ListItem
 								key={5}
 								insetChildren={true}
-								primaryText='历史记录'
+								primaryText='挑战记录'
 								leftIcon={<MdIconHistory />}
 								nestedItems={[
 									<ListItem
