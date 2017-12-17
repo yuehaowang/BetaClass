@@ -7,7 +7,6 @@ import MdIconCameraEnhance from 'material-ui/svg-icons/action/camera-enhance';
 import MdIconFlag from 'material-ui/svg-icons/content/flag';
 import q1img from './assets/q1.png';
 import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
 
 
 class Contest1v1 extends React.Component {

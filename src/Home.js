@@ -1,29 +1,14 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import {GridList, GridTile} from 'material-ui/GridList';
 import MdIconDoneAll from 'material-ui/svg-icons/action/done-all';
 import MdIconCenterFocusWeak from 'material-ui/svg-icons/image/center-focus-weak';
-import MdIconThumbUp from 'material-ui/svg-icons/action/thumb-up';
 import MdIconEqualizer from 'material-ui/svg-icons/av/equalizer';
-import MdIconExplore from 'material-ui/svg-icons/action/explore';
-import MdIconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import Subheader from 'material-ui/Subheader'
-import {lightBlue500, indigo500, green500, orange500} from 'material-ui/styles/colors';
 import fig1 from './assets/fig1.png';
 
 
 class Home extends React.Component {
 	render() {
-		let iconSizeStyle = {
-			width: 100,
-			height: 100
-		};
-		let gridTileStyle = {
-			textAlign: 'center',
-			marginRight: 10,
-			marginBottom: 20
-		};
-
 		return (
 			<div style={{padding: 15}}>
 				<Paper zDepth={1} style={{borderRadius: 8, padding: 5}}>
@@ -53,7 +38,7 @@ class Home extends React.Component {
 
 				<div style={{marginTop: 60}}>
 					<h2>学习记录</h2>
-					<img src={fig1} />
+					<img src={fig1} alt='fig1' />
 				</div>
 			</div>
 		);

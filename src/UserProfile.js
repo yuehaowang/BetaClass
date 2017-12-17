@@ -12,8 +12,6 @@ import MdIconAllOut from 'material-ui/svg-icons/action/all-out';
 import MdIconHistory from 'material-ui/svg-icons/action/history';
 import MdIconChangeHistory from 'material-ui/svg-icons/action/change-history';
 import yuehaoavatar from './assets/avatar.png';
-import Avatar from 'material-ui/Avatar';
-import MdIconList from 'material-ui/svg-icons/action/list'
 
 
 class UserProfile extends React.Component {

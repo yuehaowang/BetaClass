@@ -3,15 +3,7 @@ import {Card, CardActions, CardHeader, CardMedia} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import Chip from 'material-ui/Chip';
-import MdIconCake from 'material-ui/svg-icons/social/cake';
-import MdIconSchool from 'material-ui/svg-icons/social/school';
-import MdIconStars from 'material-ui/svg-icons/action/stars';
-import MdIconFlashOn from 'material-ui/svg-icons/image/flash-on';
-import MdIconAllOut from 'material-ui/svg-icons/action/all-out';
-import MdIconHistory from 'material-ui/svg-icons/action/history';
 import MdIconChangeHistory from 'material-ui/svg-icons/action/change-history';
-import yuehaoavatar from './assets/avatar.png';
 import Avatar from 'material-ui/Avatar';
 import MdIconList from 'material-ui/svg-icons/action/list'
 import fig2 from './assets/fig2.png'
@@ -49,7 +41,7 @@ class SchoolManangePanel extends React.Component {
 									<ListItem
 										key={1}
 										primaryText={
-											<img src={fig2} width={300} />
+											<img src={fig2} width={300} alt='fig2' />
 										}
 										leftIcon={<MdIconChangeHistory />}
 									/>
